@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import { TodoList } from "./containers";
 
 class App extends Component {
+
   render() {
     return (
-      <div>
-        hi
-      </div>
+      <Provider store={store}>
+        <TodoList />
+      </Provider>
     );
   }
 }
